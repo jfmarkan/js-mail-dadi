@@ -39,6 +39,7 @@ btnVerify.addEventListener('click',
             document.getElementById('emailaddress').classList.remove('is-invalid');
         } else {
             document.getElementById('emailaddress').classList.add('is-invalid');
+            document.getElementById('emailaddress').classList.remove('is-valid');
         }
     }    
 )
