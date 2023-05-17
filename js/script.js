@@ -27,7 +27,8 @@ console.log(userMail);
 for ( i = 0 ; i < mailList.length ; i++){
     if (mailList[i] === userMail){
         result = true;
-        console.log(result);
     } 
 }
+
+console.log(result)
 
