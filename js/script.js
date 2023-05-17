@@ -27,7 +27,7 @@ btnVerify.addEventListener('click',
     function(){
         userMail = document.getElementById('emailaddress').value;
         console.log(userMail);
-        let result
+        let result = false
         for ( i = 0 ; i < mailList.length ; i++){
             if (mailList[i] === userMail){
                 result = true;
