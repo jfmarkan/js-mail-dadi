@@ -18,17 +18,31 @@ if (player1 > player2){
 //----------------------------------------------------------------------------------------------------------------------------------------
 
 let userMail;
-let mailList = ["jfmarkan@gmail.com", 'panchitomarkan@gmail.com', 'boolean@gmail.com', 'riccardo@gmail.com'];
+let mailList = ["jfmarkan@gmail.com", 'antonio@boolean.com', 'stefano@boolean.com', 'riccardo@boolean.com'];
 let result = false;
 
-userMail = prompt('Insert your e-mail');
-console.log(userMail);
 
-for ( i = 0 ; i < mailList.length ; i++){
-    if (mailList[i] === userMail){
-        result = true;
-    } 
-}
 
-console.log(result)
+
+const btnVerify = document.getElementById('btnverify');
+
+btnVerify.addEventListener('click',
+    function(){
+        userMail = document.getElementById('emailaddress').value;
+        console.log(userMail);
+        for ( i = 0 ; i < mailList.length ; i++){
+            if (mailList[i] === userMail){
+                result = true;
+            }    
+        }
+        console.log(result);
+        if (result === true){
+            document.getElementById('emailaddress').classList.add('is-valid');
+            document.getElementById('emailaddress').classList.remove('is-invalid');
+        } else {
+            document.getElementById('emailaddress').classList.add('is-invalid');
+        }
+    }    
+)
+
 
