@@ -19,9 +19,6 @@ if (player1 > player2){
 
 let userMail;
 let mailList = ["jfmarkan@gmail.com", 'antonio@boolean.com', 'stefano@boolean.com', 'riccardo@boolean.com'];
-let result = false;
-
-
 
 
 const btnVerify = document.getElementById('btnverify');
@@ -30,6 +27,7 @@ btnVerify.addEventListener('click',
     function(){
         userMail = document.getElementById('emailaddress').value;
         console.log(userMail);
+        let result
         for ( i = 0 ; i < mailList.length ; i++){
             if (mailList[i] === userMail){
                 result = true;
